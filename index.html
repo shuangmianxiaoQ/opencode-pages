@@ -47,7 +47,7 @@
                     <i class="fa-brands fa-windows text-lg"></i>
                     <i class="fa-brands fa-linux text-lg"></i>
                 </div>
-                <span>最后更新：2026-03-10 | 官方文档：opencode.ai/docs</span>
+                <span>最后更新：2026-03-10 | 官方文档：https://opencode.ai/docs</span>
             </div>
         </div>
 
@@ -143,16 +143,16 @@
                 <div class="p-2">
                     <div class="section-title">启动交互式 TUI</div>
                     <div class="row-item"><span class="cmd-text">opencode</span><span class="desc-text">启动当前目录</span></div>
-                    <div class="row-item"><span class="cmd-text">opencode /path</span><span class="desc-text">启动指定目录</span></div>
+                    <div class="row-item"><span class="cmd-text">opencode /path/to/project</span><span class="desc-text">启动指定目录</span></div>
                     <div class="row-item"><span class="cmd-text">opencode -c</span><span class="desc-text">继续上次会话</span></div>
-                    <div class="row-item"><span class="cmd-text">opencode -s &lt;id&gt;</span><span class="desc-text">继续指定会话</span></div>
-                    <div class="row-item"><span class="cmd-text">opencode -m &lt;mod&gt;</span><span class="desc-text">指定模型启动</span></div>
+                    <div class="row-item"><span class="cmd-text">opencode -s &lt;sessionID&gt;</span><span class="desc-text">继续指定会话</span></div>
+                    <div class="row-item"><span class="cmd-text">opencode -m anthropic/claude-sonnet-4-5</span><span class="desc-text">指定模型启动</span></div>
 
                     <div class="section-title">非交互模式 (run)</div>
                     <div class="row-item"><span class="cmd-text">opencode run "提问"</span><span class="desc-text">单次执行</span></div>
-                    <div class="row-item"><span class="cmd-text">... -f file.txt</span><span class="desc-text">附加文件</span></div>
-                    <div class="row-item"><span class="cmd-text">... --share</span><span class="desc-text">运行并分享</span></div>
-                    <div class="row-item"><span class="cmd-text">... --format json</span><span class="desc-text">JSON 格式输出</span></div>
+                    <div class="row-item"><span class="cmd-text">opencode run -f file.txt "附加文件"</span><span class="desc-text">附加文件</span></div>
+                    <div class="row-item"><span class="cmd-text">opencode run --share "运行并分享会话"</span><span class="desc-text">运行并分享</span></div>
+                    <div class="row-item"><span class="cmd-text">opencode run --format json "输出原始 JSON 事件"</span><span class="desc-text">JSON 格式输出</span></div>
 
                     <div class="section-title">服务端模式 (Client/Server)</div>
                     <div class="row-item"><span class="cmd-text">opencode serve</span><span class="desc-text">启动无头API服务器</span></div>
@@ -237,15 +237,15 @@
                     <div class="row-item"><span class="cmd-text text-[10px]">OPENCODE_SERVER_PORT</span><span class="desc-text">指定服务端口</span></div>
                     
                     <div class="section-title">禁用开关 (DISABLE_)</div>
-                    <div class="row-item"><span class="cmd-text text-[10px]">..._AUTOUPDATE</span><span class="desc-text">禁用自动更新</span></div>
-                    <div class="row-item"><span class="cmd-text text-[10px]">..._AUTOCOMPACT</span><span class="desc-text">禁用自动压缩</span></div>
-                    <div class="row-item"><span class="cmd-text text-[10px]">..._CLAUDE_CODE</span><span class="desc-text">不读取.claude</span></div>
+                    <div class="row-item"><span class="cmd-text text-[10px]">OPENCODE_DISABLE_AUTOUPDATE</span><span class="desc-text">禁用自动更新</span></div>
+                    <div class="row-item"><span class="cmd-text text-[10px]">OPENCODE_DISABLE_AUTOCOMPACT</span><span class="desc-text">禁用自动压缩</span></div>
+                    <div class="row-item"><span class="cmd-text text-[10px]">OPENCODE_DISABLE_CLAUDE_CODE</span><span class="desc-text">不读取.claude</span></div>
 
                     <div class="section-title">实验性功能 (EXPERIMENTAL_)</div>
                     <div class="row-item"><span class="cmd-text text-[10px]">OPENCODE_EXPERIMENTAL</span><span class="desc-text">启用所有实验功能</span></div>
-                    <div class="row-item"><span class="cmd-text text-[10px]">..._PLAN_MODE</span><span class="desc-text">启用 Plan 模式</span></div>
-                    <div class="row-item"><span class="cmd-text text-[10px]">..._LSP_TOOL</span><span class="desc-text">启用 LSP 增强</span></div>
-                    <div class="row-item"><span class="cmd-text text-[10px]">..._FILEWATCHER</span><span class="desc-text">全目录文件监听</span></div>
+                    <div class="row-item"><span class="cmd-text text-[10px]">OPENCODE_EXPERIMENTAL_PLAN_MODE</span><span class="desc-text">启用 Plan 模式</span></div>
+                    <div class="row-item"><span class="cmd-text text-[10px]">OPENCODE_EXPERIMENTAL_LSP_TOOL</span><span class="desc-text">启用 LSP 增强</span></div>
+                    <div class="row-item"><span class="cmd-text text-[10px]">OPENCODE_EXPERIMENTAL_FILEWATCHER</span><span class="desc-text">全目录文件监听</span></div>
                 </div>
             </div>
 
@@ -256,7 +256,7 @@
                 </div>
                 <div class="p-2">
                     <div class="section-title">安装与升级</div>
-                    <div class="row-item"><span class="cmd-text text-blue-600">curl -fsSL opencode.ai/install | bash</span></div>
+                    <div class="row-item"><span class="cmd-text text-blue-600">curl -fsSL https://opencode.ai/install | bash</span></div>
                     <div class="row-item"><span class="cmd-text">npm install -g opencode-ai</span></div>
                     <div class="row-item"><span class="cmd-text">brew install anomalyco/tap/opencode</span></div>
                     <div class="row-item mt-1"><span class="cmd-text">opencode upgrade</span><span class="desc-text">升级至最新</span></div>
